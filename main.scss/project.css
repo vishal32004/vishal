@@ -1,0 +1,239 @@
+#Projects {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+
+#Projects h1,
+#Projects h2,
+#Projects h3 {
+    text-transform: uppercase;
+}
+
+#Projects h2 {
+    font-size: 1.125em;
+    color: #4a89ca;
+    font-weight: 600;
+    margin: 0;
+}
+
+#Projects h3 {
+    font-size: 1.3em;
+    line-height: 1.25em;
+    margin-top: .85em;
+    margin-bottom: .5em;
+}
+
+#Projects p {
+    font-size: .875em;
+    line-height: 1.4;
+    margin: 0 0 1.5em;
+}
+
+/* Project heai */
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+
+#Projects .container,
+#Projects .content {
+    margin: auto;
+}
+
+.main-header {
+    text-align: center;
+    padding: 2.8em 0 3.8em;
+}
+
+.cube-container {
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto 4.5em;
+}
+
+/* ---- Page Elements ---- */
+
+.name {
+    font-size: 2.5em;
+    margin: 0 0 1.5em;
+    line-height: 1;
+    padding-top: 20px;
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
+}
+
+.name span {
+    font-weight: 300;
+    margin-left: -3px;
+}
+
+#Projects .main-header .logo {
+    width: 60px;
+    margin-bottom: .4em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ---- Photo Overlay ---- */
+
+.photo-desc {
+    font-size: .85em;
+    color: #fff;
+    padding: 1.1em 1em 0;
+    background: #345d88;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* Project go button */
+.photo-cube .photo-desc .button {
+    position: relative;
+    background: linear-gradient(277deg, rgba(213, 213, 213, 0.1) 0%, rgba(213, 213, 213, 0.02) 50%, rgba(42, 42, 42, 0.02) 50%, rgba(42, 42, 42, 0.2) 100%), linear-gradient(295deg, rgba(73, 73, 73, 0.3) 0%, rgba(73, 73, 73, 0.1) 50%, rgba(229, 229, 229, 0.1) 50%, rgba(229, 229, 229, 0.03) 100%), linear-gradient(145deg, rgba(77, 77, 77, 0.1) 0%, rgba(77, 77, 77, 0.1) 50%, rgba(123, 123, 123, 0.1) 50%, rgba(123, 123, 123, 0.1) 100%), linear-gradient(54deg, rgba(51, 51, 51, 0.3) 0%, rgba(51, 51, 51, 0.1) 50%, rgba(29, 29, 29, 0.2) 50%, rgba(29, 29, 29, 0.03) 100%), linear-gradient(170deg, rgba(9, 9, 9, 0.02) 0%, rgba(9, 9, 9, 0.02) 50%, rgba(243, 243, 243, 0.02) 50%, rgba(243, 243, 243, 0.02) 100%), linear-gradient(264deg, rgba(214, 214, 214, 0.01) 0%, rgba(214, 214, 214, 0.01) 50%, rgba(153, 153, 153, 0.01) 50%, rgba(153, 153, 153, 0.01) 100%), linear-gradient(90deg, #6330de, #4cd4e9);
+    padding: 1em 1.5em;
+    border: 1px solid black;
+    border-radius: 25px 7px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.7s ease;
+}
+
+.photo-cube .photo-desc .button:after {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background: linear-gradient(45deg, #2e5e95, #3b83d1, #435b8e);
+    width: 150px;
+    height: 30px;
+    content: '';
+    transform: translate(-50%);
+    border-radius: 25px 7px;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.photo-cube .photo-desc .button:hover {
+    border-radius: 7px 25px;
+    background: linear-gradient(45deg, #ef0781 0%, #ef0781 6%, #d00a70 6%, #d00a70 25%, #b10d60 25%, #b10d60 40%, #93104f 40%, #93104f 45%, #74133e 45%, #74133e 53%, #55162e 53%, #55162e 66%, #36191d 66%, #36191d 100%);
+    letter-spacing: 0.2em;
+    border: 1px solid white;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+    .cube-container {
+        float: left;
+        margin-left: 16.6%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .cube-container:first-child {
+        margin-left: 0;
+    }
+
+    .cube-container:last-child {
+        float: right;
+    }
+
+    .content {
+        max-width: 900px;
+        margin: auto;
+    }
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.cube-container {
+    box-shadow: 0 18px 40px 5px rgba(0, 0, 0, .4);
+    perspective: 800px;
+}
+
+.photo-cube {
+    transition: transform 2s ease-in-out;
+    width: 220px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+
+.photo-cube:hover {
+    transform: rotateY(-270deg);
+}
+
+.front,
+.back,
+.left,
+.right {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.front {
+    transform: translate3d(0, 0, 110px);
+}
+
+.back {
+    transform: translateZ(-110px) rotateY(270deg);
+    transform-origin: center left;
+}
+
+.left {
+    transform: rotateY(-270deg) translate3d(110px, 0, 0);
+    transform-origin: top right;
+}
+
+.right {
+    transform: translateZ(-110px) rotateY(180deg);
+}
+
+
+.cube-container:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.cube-container:nth-child(3) {
+    transition-delay: 400ms;
+}
